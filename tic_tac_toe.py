@@ -76,6 +76,25 @@ def diagonal(board):
     if board[0] == board[4] == board[8] != "-":
         winner = board[0]
         return True
+
+while game_running:
+    print_board(board)
+    input_player(board)
+
+    # Check for win or tie
+    if horizontal(board) or vertical(board) or diagonal(board):
+        print_board(board)
+        print(f"{winner} wins!")
+        with open(output_path, "w") as file:
+            file.write(winner)
+        game_running = False
+    elif "-" not in board:
+        print_board(board)
+        print("It's a tie!")
+        with open(output_path, "w") as file:
+            file.write("Tie")
+        game_running = False
+
         
     
 
