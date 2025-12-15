@@ -74,8 +74,9 @@ def vertical(board):
 def diagonal(board):
     global winner
     if board[0] == board[4] == board[8] != "-":
-        winner = board[0]()
-  
+        winner = board[0]
+        return True
+        
     
 
     
