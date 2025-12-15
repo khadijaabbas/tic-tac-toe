@@ -11,9 +11,7 @@ core python concepts.
 import random
 import os
 
-# ----------------------------
 # Setup output file (same folder)
-# ----------------------------
 output_path = "output.txt"
 
 # Try reading previous winner
@@ -24,9 +22,7 @@ try:
 except FileNotFoundError:
     print("No previous winner file found. Continuing game...\n")
 
-# ----------------------------
 # Initialize the game
-# ----------------------------
 board = ["-"] * 9
 current_player = "X"
 winner = None
